@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+nav a, p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+header {
+  background: white;
+  padding: 1rem 2rem;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+nav a:hover {
+  border-color: #999;
+}
+.banner {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: white;
+}
+.banner .slider img {
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive untuk slider */
+.slider-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+blockquote {
+  font-style: italic;
+  margin-top: 1rem;
+}
+.package {
+  background: #f0f3f8;
+  padding: 2rem 1rem;
+}
+.package h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.packages {
+  display: grid;
+  gap: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+.package-item {
+  background: white;
+  padding: 1rem;
+  border-left: 4px solid #315136;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.package-item span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Ukuran font menyesuaikan dengan lebar layar */
+.hero-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  text-align: center;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .packages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+}
+
+.banner-swiper {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.swiper-slide img {
+  width: 100%;
+  display: block;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3b82f6;
+}
+.swiper-pagination-bullet-active {
+  background: #3b82f6;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    margin: 1rem;
+    padding: 1rem;
+    border-width: 1px;
+  }
+}
+
+/* Tampilan Layanan */
+.service-types {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.service-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.service-item span {
+  font-size: 0.7rem;
+  text-align: center;
+  color: #333;
+}
+
+
+form input, form button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #f1f5f9;
+}
+
+.form-container {
+  background-color: #e2e8f0;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.form-container p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #334155;
+}
+
+.form-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-container button {
+  background-color: #2c4c31;
+  color: white;
+  padding: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-container button:hover {
+  background-color: #23a75a;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Ukuran font default untuk layar besar */
+body {
+  font-size: 16px;
+}
+
+/* Tampilan form untuk layar ≤ 768px (tablet & mobile) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .form-container input,
+  .form-container select {
+    font-size: 0.9rem;
+  }
+
+  .form-container button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tampilan form untuk layar sangat kecil (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .form-container button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tampilan testimoni*/
+.testimonials {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #002244;
+  margin-bottom: 40px;
+  font-weight: 100;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: #cef0d2;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 300px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 15px solid #fdfdfd;
+}
+
+.testimonial-text {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.testimonial-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

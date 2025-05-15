@@ -1,11 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open Trip</title>
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
+
 <body>
+  <div class="page-container">
+
+    <!-- Link Javascript untuk banner -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <header>
+      <!-- Logo dan Button Menu -->
+      <div class="logo">Open Trip</div>
+      <nav>
+        <ul>
+          <a href="#banner">Home</a>
+          <a href="#package">Our Package</a>
+          <a href="#contact">Call Us</a>
+        </ul>
+      </nav>
+    </header>
     
+    <!-- Banner Section -->
+    <section id="banner" class="banner">
+      <div class="banner-text">
+        <h1>Your Trusted Travel Agent's</h1>
+        <p>Your happiness is our happiness</p>
+      </div>
+      
+      <!-- Slider SwiperJS atau gambar banner -->
+      <div class="swiper banner-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/bali.jpg" alt="Slide 1" /></div>
+          <div class="swiper-slide"><img src="assets/bandung.jpg" alt="Slide 2" /></div>
+          <div class="swiper-slide"><img src="assets/surabaya.jpg" alt="Slide 3" /></div>
+          <div class="swiper-slide"><img src="assets/japan.jpg" alt="Slide 4" /></div>
+          <div class="swiper-slide"><img src="assets/singapore.jpg" alt="Slide 5" /></div>
+        </div>
+        
+        <!-- Add navigation arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Halaman Layanan -->
+    <div class="service-types">
+      <div class="service-item">
+        <img src="assets/private.svg" alt="Private Tour">
+        <span>Private Tour</span>
+      </div>
+      <div class="service-item">
+        <img src="assets/transport.svg" alt="Transport Booking">
+        <span>Transport Booking</span>
+      </div>
+      <div class="service-item">
+        <img src="assets/hotel.svg" alt="Hotel Booking">
+        <span>Hotel Booking</span>
+      </div>
+      <div class="service-item">
+        <img src="assets/doc.svg" alt="Visa & Documents">
+        <span>Documents</span>
+      </div>
+    </div>
+    
+    <!-- Halaman Testimoni-->
+    <section class="testimonials">
+      <!-- <h3>Testimonials</h3> -->
+      <div class="testimonial-cards">
+        <!-- Testimoni 1 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">Memuaskan, Cepat, Responsif dan Tanggung jawab.</p>
+          <div class="testimonial-user">
+            <img src="assets/user.png" alt="Dhio" />
+            <div>
+              <strong>Dhio</strong><br>
+              <small>Freelancer</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimoni 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">Sangat membantu kita dalam segala perjalanan, Semoga Travel Agent ini kedepannya selalu sukses</p>
+          <div class="testimonial-user">
+            <img src="assets/user.png" alt="Noorlia" />
+            <div>
+              <strong>Noorlia</strong><br>
+              <small>Karyawan, PT Jaya Energi</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimoni 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">Tetap di pertahankan komunikasi yang cepat, tepat, respon yang baik, dan sukses selalu</p>
+          <div class="testimonial-user">
+            <img src="assets/user.png" alt="Fredly" />
+            <div>
+              <strong>Fredly</strong><br>
+              <small>Photografer </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Our Package Section -->
+    <section id="package" class="package">
+      <h2>Our Package</h2>
+      <div class="packages">
+        <div class="package-item">Bali<br><span>Wisata budaya dan kuliner khas Bali.</span></div>
+        <div class="package-item">Bandung<br><span>Udara sejuk dan berbagai macam kuliner.</span></div>
+        <div class="package-item">Surabaya<br><span>Wisata sejarah dan kuliner lezat.</span></div>
+        <div class="package-item">Singapore<br><span>Modern dan ramah turis.</span></div>
+        <div class="package-item">Japan<br><span>Keindahan sakura dan budaya Jepang.</span></div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="form-container">
+        <h2>Contact Us</h2>
+        <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
+        <form id="contactForm">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" placeholder="Ketikkan Nama" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="example@email.com" required />
+          <label for="destination">Destinasi:</label>
+          <select id="destination" required>
+            <option value="">-- Pilih Destinasi --</option>
+            <option value="bali">Bali</option>
+            <option value="japan">Japan</option>
+            <option value="singapore">Singapore</option>
+            <option value="bandung">Bandung</option>
+            <option value="surabaya">Surabaya</option>
+          </select>
+          <button type="submit">SUBMIT</button>
+          <div id="formMessage"></div>
+        </form>
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; 2025 Handinidwia — All rights reserved.</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+  </div>
 </body>
 </html>
